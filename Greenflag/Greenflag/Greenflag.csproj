@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB512DB6-CD62-49BE-A1F3-B29C3478ABF2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Greenflag</RootNamespace>
+    <AssemblyName>Greenflag</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="css\blue.css" />
+    <Content Include="css\coffee.css" />
+    <Content Include="css\colors.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\green.css" />
+    <Content Include="css\layout.css" />
+    <Content Include="css\light.css" />
+    <Content Include="css\orange.css" />
+    <Content Include="css\pink.css" />
+    <Content Include="css\purple.css" />
+    <Content Include="css\red.css" />
+    <Content Include="css\sea-green.css" />
+    <Content Include="css\yellow.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="font-icons\custom-icons\css\animation.css" />
+    <Content Include="font-icons\custom-icons\css\custom-icons-codes.css" />
+    <Content Include="font-icons\custom-icons\css\custom-icons-embedded.css" />
+    <Content Include="font-icons\custom-icons\css\custom-icons-ie7-codes.css" />
+    <Content Include="font-icons\custom-icons\css\custom-icons-ie7.css" />
+    <Content Include="font-icons\custom-icons\css\custom-icons.css" />
+    <Content Include="font-icons\custom-icons\demo.html" />
+    <Content Include="font-icons\custom-icons\font\custom-icons.svg" />
+    <Content Include="font-icons\custom-icons\LICENSE.txt" />
+    <Content Include="font-icons\custom-icons\README.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="images\apple-touch-icon-114x114.png" />
+    <Content Include="images\apple-touch-icon-144x144.png" />
+    <Content Include="images\apple-touch-icon-57x57.png" />
+    <Content Include="images\apple-touch-icon-72x72.png" />
+    <Content Include="images\apple-touch-icon-precomposed.png" />
+    <Content Include="images\apple-touch-icon.png" />
+    <Content Include="images\bgMain.jpg" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\icon-map.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\logoLarge-flag.png" />
+    <Content Include="images\logoLarge.png" />
+    <Content Include="images\logoMain.png" />
+    <Content Include="images\logoSmall-flag.png" />
+    <Content Include="images\main-logo-big.png" />
+    <Content Include="images\main-logo.png" />
+    <Content Include="images\neko-logo.png" />
+    <Content Include="images\news\desktopApplications.png" />
+    <Content Include="images\news\desktopApplications_small.png" />
+    <Content Include="images\news\mobileApplications.png" />
+    <Content Include="images\news\mobileApplications_small.png" />
+    <Content Include="images\news\news1.jpg" />
+    <Content Include="images\news\news2.jpg" />
+    <Content Include="images\news\news3.jpg" />
+    <Content Include="images\news\webApplications.png" />
+    <Content Include="images\news\webApplications_small.png" />
+    <Content Include="images\portfolio\carousel-1.jpg" />
+    <Content Include="images\portfolio\carousel-2.jpg" />
+    <Content Include="images\portfolio\carousel-3.jpg" />
+    <Content Include="images\portfolio\img-fullwidth-1.jpg" />
+    <Content Include="images\portfolio\img-fullwidth-2.jpg" />
+    <Content Include="images\portfolio\vign1.jpg" />
+    <Content Include="images\portfolio\vign2.jpg" />
+    <Content Include="images\portfolio\vign3.jpg" />
+    <Content Include="images\portfolio\vign4.jpg" />
+    <Content Include="images\portfolio\vign5.jpg" />
+    <Content Include="images\portfolio\vign6.jpg" />
+    <Content Include="images\portfolio\vign7.jpg" />
+    <Content Include="images\portfolio\vign8.jpg" />
+    <Content Include="images\portfolio\vign9.jpg" />
+    <Content Include="images\portfolio\zoom1.jpg" />
+    <Content Include="images\portfolio\zoom2.jpg" />
+    <Content Include="images\portfolio\zoom3.jpg" />
+    <Content Include="images\portfolio\zoom4.jpg" />
+    <Content Include="images\portfolio\zoom5.jpg" />
+    <Content Include="images\portfolio\zoom6.jpg" />
+    <Content Include="images\portfolio\zoom7.jpg" />
+    <Content Include="images\portfolio\zoom8.jpg" />
+    <Content Include="images\portfolio\zoom9.jpg" />
+    <Content Include="images\team\pic1.jpg" />
+    <Content Include="images\team\pic2.jpg" />
+    <Content Include="images\team\pic3.jpg" />
+    <Content Include="images\team\pic4.jpg" />
+    <Content Include="images\technologies\amazonwebstore.jpg" />
+    <Content Include="images\technologies\android.jpg" />
+    <Content Include="images\technologies\aws.jpg" />
+    <Content Include="images\technologies\Azure.jpg" />
+    <Content Include="images\technologies\footer-work1.jpg" />
+    <Content Include="images\technologies\footer-work2.jpg" />
+    <Content Include="images\technologies\googletv.jpg" />
+    <Content Include="images\technologies\htmlcssjs.jpg" />
+    <Content Include="images\technologies\lightswitch.jpg" />
+    <Content Include="images\technologies\magento.jpg" />
+    <Content Include="images\technologies\MicrosoftDotNet.jpg" />
+    <Content Include="images\technologies\mongodb.jpg" />
+    <Content Include="images\technologies\mysql.jpg" />
+    <Content Include="images\technologies\nopcommerce.jpg" />
+    <Content Include="images\technologies\oracle.jpg" />
+    <Content Include="images\technologies\SharePoint.jpg" />
+    <Content Include="images\technologies\sqlite.jpg" />
+    <Content Include="images\technologies\SqlServer.jpg" />
+    <Content Include="images\technologies\Windows8.jpg" />
+    <Content Include="images\technologies\windowsphone.jpg" />
+    <Content Include="images\thank-you-note.jpg" />
+    <Content Include="images\theme-pics\big-city.jpg" />
+    <Content Include="images\theme-pics\home-girl.png" />
+    <Content Include="images\theme-pics\loader.gif" />
+    <Content Include="images\theme-pics\paralax-1.jpg" />
+    <Content Include="images\theme-pics\paralax-4.jpg" />
+    <Content Include="images\theme-pics\paralax-blue-2.jpg" />
+    <Content Include="images\theme-pics\paralax-blue-3.jpg" />
+    <Content Include="images\theme-pics\paralax-grey-2.jpg" />
+    <Content Include="images\theme-pics\paralax-grey-3.jpg" />
+    <Content Include="images\theme-pics\paralax-orange-2.jpg" />
+    <Content Include="images\theme-pics\paralax-orange-3.jpg" />
+    <Content Include="images\theme-pics\paralax-sea-green-2.jpg" />
+    <Content Include="images\theme-pics\paralax-sea-green-3.jpg" />
+    <Content Include="images\theme-pics\paralax-yellow-2.jpg" />
+    <Content Include="images\theme-pics\paralax-yellow-3.jpg" />
+    <Content Include="images\theme-pics\raceCar.jpg" />
+    <Content Include="images\theme-pics\services.png" />
+    <Content Include="images\tree.jpg" />
+    <Content Include="images\works\footer-work1.jpg" />
+    <Content Include="images\works\footer-work2.jpg" />
+    <Content Include="js-plugin\animation-framework\animate.css" />
+    <Content Include="js-plugin\animation-framework\animate.min.css" />
+    <Content Include="js-plugin\appear\jquery.appear.js" />
+    <Content Include="js-plugin\appear\nekoAnim.css" />
+    <Content Include="js-plugin\easing\jquery.easing.1.3.js" />
+    <Content Include="js-plugin\flexslider\flexslider.css" />
+    <Content Include="js-plugin\flexslider\images\bg_direction_nav.png" />
+    <Content Include="js-plugin\flexslider\jquery.flexslider-min.js" />
+    <Content Include="js-plugin\flexslider\jquery.flexslider.js" />
+    <Content Include="js-plugin\flexslider\themes\himalaya-flexslider-theme.css" />
+    <Content Include="js-plugin\flexslider\themes\slider-overlay.png" />
+    <Content Include="js-plugin\hoverdir\css\style.css" />
+    <Content Include="js-plugin\hoverdir\jquery.hoverdir.js" />
+    <Content Include="js-plugin\in-view\jquery.inview.js" />
+    <Content Include="js-plugin\isotope\css\style.css" />
+    <Content Include="js-plugin\isotope\jquery.isotope.js" />
+    <Content Include="js-plugin\isotope\jquery.isotope.min.js" />
+    <Content Include="js-plugin\jquery-cookie\jquery.cookie.js" />
+    <Content Include="js-plugin\jquery-ui\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\countdownBasic.html" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\countdownGlowing.gif" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\countdownLED.png" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ar.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-bg.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-bn.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-bs.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ca.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-cs.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-cy.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-da.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-de.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-el.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-es.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-et.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-fa.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-fi.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-fr.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-gl.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-gu.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-he.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-hr.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-hu.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-hy.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-id.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-it.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ja.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-kn.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ko.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-lt.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-lv.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ml.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ms.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-my.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-nb.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-nl.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-pl.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-pt-BR.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ro.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-ru.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sk.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sl.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sq.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sr-SR.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sr.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-sv.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-th.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-tr.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-uk.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-uz.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-vi.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-zh-CN.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown-zh-TW.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown.css" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown.js" />
+    <Content Include="js-plugin\jquery.countdown.package-1.6.3\jquery.countdown.min.js" />
+    <Content Include="js-plugin\jquery.sharrre-1.3.4\index.html" />
+    <Content Include="js-plugin\jquery.sharrre-1.3.4\jquery.sharrre-1.3.4.js" />
+    <Content Include="js-plugin\jquery.sharrre-1.3.4\jquery.sharrre-1.3.4.min.js" />
+    <Content Include="js-plugin\jquery\1.8.3\jquery.min.js" />
+    <Content Include="js-plugin\magnific-popup\jquery.magnific-popup.js" />
+    <Content Include="js-plugin\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="js-plugin\magnific-popup\magnific-popup.css" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\css\cmxformTemplate.css" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\img\ajax-loader.gif" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\img\bg-1.png" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\img\bg-2.png" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\img\bg-3.png" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\img\error.gif" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\img\success.gif" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\js\cmxformTemplate.css" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\js\jquery.form.js" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\js\jquery.validate.js" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\js\jquery.validate.min.js" />
+    <Content Include="js-plugin\owl.carousel\assets\css\bootstrapTheme.css" />
+    <Content Include="js-plugin\owl.carousel\assets\css\custom.css" />
+    <Content Include="js-plugin\owl.carousel\assets\css\responsive.css" />
+    <Content Include="js-plugin\owl.carousel\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="js-plugin\owl.carousel\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="js-plugin\owl.carousel\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="js-plugin\owl.carousel\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="js-plugin\owl.carousel\assets\ico\favicon.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\AjaxLoader.gif" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\controls.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\css3.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\feather.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\grab.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\modern.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\multi.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\responsive.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\tons.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\touch.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\demo-slides\zombie.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\glyphicons-halflings-green.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\glyphicons-halflings.png" />
+    <Content Include="js-plugin\owl.carousel\assets\img\owl-logo.png" />
+    <Content Include="js-plugin\owl.carousel\assets\js\application.js" />
+    <Content Include="js-plugin\owl.carousel\assets\js\bootstrap-collapse.js" />
+    <Content Include="js-plugin\owl.carousel\assets\js\bootstrap-tab.js" />
+    <Content Include="js-plugin\owl.carousel\assets\js\bootstrap-transition.js" />
+    <Content Include="js-plugin\owl.carousel\assets\js\google-code-prettify\prettify.css" />
+    <Content Include="js-plugin\owl.carousel\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="js-plugin\owl.carousel\assets\js\google-code-prettify\run_prettify.js" />
+    <Content Include="js-plugin\owl.carousel\assets\js\jquery-1.9.1.min.js" />
+    <Content Include="js-plugin\owl.carousel\changelog.html" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\fullimage1.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\fullimage2.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\fullimage3.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\fullimage4.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\fullimage5.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\fullimage6.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\fullimage7.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\owl1.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\owl2.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\owl3.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\owl4.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\owl5.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\owl6.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\owl7.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\assets\owl8.jpg" />
+    <Content Include="js-plugin\owl.carousel\demos\autoHeight.html" />
+    <Content Include="js-plugin\owl.carousel\demos\click.html" />
+    <Content Include="js-plugin\owl.carousel\demos\custom.html" />
+    <Content Include="js-plugin\owl.carousel\demos\customJson.html" />
+    <Content Include="js-plugin\owl.carousel\demos\full.html" />
+    <Content Include="js-plugin\owl.carousel\demos\images.html" />
+    <Content Include="js-plugin\owl.carousel\demos\json.html" />
+    <Content Include="js-plugin\owl.carousel\demos\lazyLoad.html" />
+    <Content Include="js-plugin\owl.carousel\demos\navOnTop.html" />
+    <Content Include="js-plugin\owl.carousel\demos\navOnTop2.html" />
+    <Content Include="js-plugin\owl.carousel\demos\one.html" />
+    <Content Include="js-plugin\owl.carousel\demos\progressBar.html" />
+    <Content Include="js-plugin\owl.carousel\demos\randomOrder.html" />
+    <Content Include="js-plugin\owl.carousel\demos\transitions.html" />
+    <Content Include="js-plugin\owl.carousel\index.html" />
+    <Content Include="js-plugin\owl.carousel\owl-carousel\AjaxLoader.gif" />
+    <Content Include="js-plugin\owl.carousel\owl-carousel\grabbing.png" />
+    <Content Include="js-plugin\owl.carousel\owl-carousel\owl.carousel.css" />
+    <Content Include="js-plugin\owl.carousel\owl-carousel\owl.carousel.js" />
+    <Content Include="js-plugin\owl.carousel\owl-carousel\owl.carousel.min.js" />
+    <Content Include="js-plugin\owl.carousel\owl-carousel\owl.theme.css" />
+    <Content Include="js-plugin\pageSlide\jquery.pageslide-custom.js" />
+    <Content Include="js-plugin\pageSlide\jquery.pageslide.css" />
+    <Content Include="js-plugin\parallax\js\jquery.localscroll-1.2.7-min.js" />
+    <Content Include="js-plugin\parallax\js\jquery.scrollTo-1.4.3.1-min.js" />
+    <Content Include="js-plugin\parallax\js\jquery.stellar.js" />
+    <Content Include="js-plugin\parallax\js\jquery.stellar.min.js" />
+    <Content Include="js-plugin\respond\respond.min.js" />
+    <Content Include="js-plugin\respond\respond.src.js" />
+    <Content Include="js-plugin\smoothscroll\SmoothScroll.js" />
+    <Content Include="js\._custom.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\modernizr-2.6.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\_About.cshtml" />
+    <Content Include="Views\Home\_Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="font-icons\custom-icons\config.json" />
+    <Content Include="font-icons\custom-icons\font\custom-icons.eot" />
+    <Content Include="font-icons\custom-icons\font\custom-icons.ttf" />
+    <Content Include="font-icons\custom-icons\font\custom-icons.woff" />
+    <Content Include="js-plugin\jquery.sharrre-1.3.4\README.md" />
+    <Content Include="js-plugin\jquery.sharrre-1.3.4\sharrre.php" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\arial.ttf" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\php\form-handler-quotation.php" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\php\form-handler.php" />
+    <Content Include="js-plugin\neko-contact-ajax-plugin\php\image.php" />
+    <Content Include="js-plugin\owl.carousel\demos\.htaccess" />
+    <Content Include="js-plugin\owl.carousel\demos\json\customData.json" />
+    <Content Include="js-plugin\owl.carousel\demos\json\data.json" />
+    <Content Include="js-plugin\owl.carousel\LICENSE" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Views\Home\_Services.cshtml" />
+    <Content Include="Views\Home\_Works.cshtml" />
+    <Content Include="Views\Home\_Technologies.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63798</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63798/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

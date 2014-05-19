@@ -1,0 +1,55 @@
+﻿#homeFullScreen {
+    background-image: url("../images/bgMain.jpg");
+}
+.navbar-brand {
+    padding-left: 0;
+    padding-top: 10px;
+}
+#works .imgWrapper {
+    background: #3c3b3b;
+}
+#paralaxSlice1 {
+    background-image: url("../images/theme-pics/RaceCar.jpg");
+}
+#paralaxSlice2 {
+    background-image: url("../images/theme-pics/paralax-green-2.jpg");
+}
+#paralaxSlice4 {
+    background-image: url("../images/theme-pics/paralax-grey-3.jpg");
+}
+.info-popup {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px;
+    position: relative;
+    width: auto;
+}
+.popup-header img {
+    height: 75px;
+    width: 75px;
+}
+.popup-content {
+      padding: 0 25px;
+    text-align: justify;
+}
+
+@media(min-width:768px) {
+        .newsText p {
+        min-height: 200px;
+    }
+        #flexHome h1 {font-size:30px;}
+}
+@media(min-width:992px) {
+     .newsText p {
+        min-height: 130px;
+    }
+     #flexHome h1 {font-size: 40px;}
+}
+@media(min-width:1200px) {
+        .newsText p {
+        min-height: 110px;
+    }
+        #flexHome h1 {font-size: 50px;}
+}

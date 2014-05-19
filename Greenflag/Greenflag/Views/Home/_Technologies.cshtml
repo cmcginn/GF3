@@ -1,0 +1,70 @@
+﻿<style>
+    img.med {
+        width: 90px;
+        height: 71px;
+    }
+</style>
+@helper technology(string imageName, string sectionName, string sectionDesc, string url, string sectionTitle)
+{
+    <article class="col-sm-4 isotopeItem @sectionName">
+        <section class="imgWrapper">
+            <img alt="@sectionTitle" src="/images/technologies/@imageName" class="img-responsive">
+        </section>
+        <div class="mediaHover">
+            <div class="mask"><span class="sectionTitle">@sectionDesc</span></div>
+            <div class="iconLinks">
+                <a href="@url" title="@sectionName" class="sizer" target="_blank">
+                    <i class="icon-link-outline iconRounded iconBig"></i>
+                    <span>link</span>
+                </a>
+            </div>
+        </div>
+
+    </article>
+
+
+}
+<section class="slice" id="technologies" data-nekoanim="fadeInUp" data-nekodelay="100">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Technologies</h1>
+                <h2 class="subTitle">Server Side, Client Side, Data Access, E-Commerce and More...</h2>
+            </div>
+            <nav id="filter" class="col-md-12 text-center">
+                <ul>
+
+                    <li><a href="" class="current btn btn-sm" data-filter="*">All</a></li>
+                    <li><a href="" class="btn btn-sm" data-filter=".serverside">Server</a></li>
+                    <li><a href="" class="btn btn-sm" data-filter=".desktopweb">Desktop and Web</a></li>
+                    <li><a href="" class="btn btn-sm" data-filter=".devices">Devices</a></li>
+                    <li><a href="" class="btn btn-sm" data-filter=".data">Data</a></li>
+                    <li><a href="" class="btn btn-sm" data-filter=".ecom">E-Commerce</a></li>
+                </ul>
+            </nav>
+
+            <div class="portfolio-items  isotopeWrapper clearfix imgHover" id="3">
+
+                @technology("MicrosoftDotNet.jpg", "serverside", "Microsoft .NET", "http://www.microsoft.com/net", "Microsoft .NET Framework")
+                @technology("sharepoint.jpg", "serverside", "Microsoft Sharepoint", "http://office.microsoft.com/en-us/sharepoint/", "Microsoft Sharepoint")
+                @technology("azure.jpg", "serverside", "Windows Azure", "https://www.windowsazure.com/en-us/", "Windows Azure")
+                @technology("windows8.jpg", "desktopweb", "Windows 8 ", "http://windows.microsoft.com/en-us/windows-8/meet", "Windows 8")
+                @technology("lightswitch.jpg", "desktopweb", "Visual Studio Lightswitch", "http://msdn.microsoft.com/en-US/vstudio/htmlclient", "Visual Studio Lightswitch")
+                @technology("htmlcssjs.jpg", "desktopweb", "Html5, CSS, JavaScript", "http://www.w3schools.com/html/html5_intro.asp", "Html Css JavaScript")
+                @technology("windowsphone.jpg", "devices", "Windows Phone", "http://www.windowsphone.com/en-us", "Windows Phone")
+                @technology("android.jpg", "devices", "Google Android", "http://www.android.com", "Android")
+                @technology("googletv.jpg", "devices", "Google TV", "http://www.google.com/tv/", "Google Tv")
+                @technology("sqlserver.jpg", "data", "Microsoft Sql Server", "http://www.microsoft.com/en-us/server-cloud/products/sql-server/", "Microsoft SQL Server")
+                @technology("oracle.jpg", "data", "Oracle Database", "http://www.oracle.com/us/products/database/overview/index.html", "Oracle")
+                @technology("mongodb.jpg", "data", "Mongo Document Database", "https://www.mongodb.org", "Mongodb")
+                @technology("mysql.jpg", "data", "MySQL Database", "http://www.mysql.com", "MySql")
+                @technology("sqlite.jpg", "data", "SQLite Database", "http://www.sqlite.com", "SQLite")
+                @technology("aws.jpg", "data", "Amazon Web Services", "http://aws.amazon.com", "Amazon Web Services")
+                @technology("nopcommerce.jpg", "NOP Commerce", "ecom", "http://www.nopcommerce.com", "NOP Commerce")
+                @technology("magento.jpg", "ecom", "Magento Commerce", "http://magento.com", "Magento")
+                @technology("amazonwebstore.jpg", "ecom", "Amazon Web Store", "http://webstore.amazon.com", "Amazon Webstore")
+            </div>
+
+        </div>
+    </div>
+</section>
