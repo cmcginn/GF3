@@ -1,4 +1,7 @@
-﻿#homeFullScreen {
+﻿#home {
+    background-image: url("../images/theme-pics/paralax-green-2.jpg");
+}
+#homeFullScreen {
     background-image: url("../images/bgMain.jpg");
 }
 .navbar-brand {
@@ -22,10 +25,11 @@
     border-radius: 4px;
     margin: 20px auto;
     max-width: 500px;
-    padding: 20px;
+    padding: 20px 20px 70px 20px;
     position: relative;
     width: auto;
 }
+
 .popup-header img {
     height: 75px;
     width: 75px;
@@ -34,7 +38,27 @@
       padding: 0 25px;
     text-align: justify;
 }
-
+#agencyQuote {
+    font-size: 24px;
+    line-height: 24px;
+}
+#agencyServices {
+    background-color: #f3fcec;
+}
+#agencyServices article h3 {
+    margin-top: 20px;
+}
+#agencyServices article p {
+    text-align: justify;
+    height: 150px;
+}
+#agencyServices article p a {
+    white-space: nowrap;
+    
+}
+#agencyServices a {
+    outline: none;
+}
 @media(min-width:768px) {
         .newsText p {
         min-height: 200px;

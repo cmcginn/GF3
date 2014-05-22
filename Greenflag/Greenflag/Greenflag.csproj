@@ -172,6 +172,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AgenciesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -215,6 +216,8 @@
     <Content Include="font-icons\custom-icons\LICENSE.txt" />
     <Content Include="font-icons\custom-icons\README.txt" />
     <Content Include="Global.asax" />
+    <Content Include="images\agency\office.jpg" />
+    <Content Include="images\agency\process.jpg" />
     <Content Include="images\apple-touch-icon-114x114.png" />
     <Content Include="images\apple-touch-icon-144x144.png" />
     <Content Include="images\apple-touch-icon-57x57.png" />
@@ -223,6 +226,8 @@
     <Content Include="images\apple-touch-icon.png" />
     <Content Include="images\bgMain.jpg" />
     <Content Include="images\favicon.ico" />
+    <Content Include="images\GFLogoFlagOG.jpg" />
+    <Content Include="images\greenflag-agency.png" />
     <Content Include="images\icon-map.png" />
     <Content Include="images\loading.gif" />
     <Content Include="images\logoLarge-flag.png" />
@@ -296,6 +301,7 @@
     <Content Include="images\theme-pics\paralax-4.jpg" />
     <Content Include="images\theme-pics\paralax-blue-2.jpg" />
     <Content Include="images\theme-pics\paralax-blue-3.jpg" />
+    <Content Include="images\theme-pics\paralax-green-2.jpg" />
     <Content Include="images\theme-pics\paralax-grey-2.jpg" />
     <Content Include="images\theme-pics\paralax-grey-3.jpg" />
     <Content Include="images\theme-pics\paralax-orange-2.jpg" />
@@ -494,7 +500,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\_About.cshtml" />
-    <Content Include="Views\Home\_Contact.cshtml" />
+    <Content Include="Views\Shared\_Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -533,6 +539,11 @@
     <Content Include="Views\Home\_Services.cshtml" />
     <Content Include="Views\Home\_Works.cshtml" />
     <Content Include="Views\Home\_Technologies.cshtml" />
+    <Content Include="Views\Agencies\Index.cshtml" />
+    <Content Include="Views\Shared\_LandingLayout.cshtml" />
+    <Content Include="Views\Agencies\_Works.cshtml" />
+    <Content Include="Views\Agencies\_About.cshtml" />
+    <Content Include="Views\Agencies\_Partnership.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

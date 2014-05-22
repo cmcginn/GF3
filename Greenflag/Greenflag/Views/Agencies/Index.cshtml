@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_LandingLayout.cshtml";
+}
+<section id="home" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-sm-6">
+                <div class="flexslider" id="flexHome">
+                    <ul class="slides">
+                        <li>
+                            <h1>Agency Services</h1>
+                            <h2>Geared toward technology service providers</h2>
+                        </li>
+                        <li>
+                            <h1>Development in Tandem</h1>
+                            <h2>More gets done, in less time</h2>
+                        </li>
+                        <li>
+                            <h1>Flex Team</h1>
+                            <h2>Additional resources, when you need them most</h2>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-6 hidden-xs">
+                <img src="/images/agency/office.jpg" alt="Ashley, Bootstrap website template" class="img-responsive" />
+            </div>
+        </div>
+    </div>
+</section>
+<!--about-->
+@Html.Partial("_About")
+<!--about-->
+<div data-stellar-background-ratio="0.5" class="color4" id="paralaxSlice2" style="background-position: 50% 42.75px;">
+    <div class="maskParent">
+        <div class="paralaxMask"></div>
+        <div class="paralaxText container">
+            <blockquote id="agencyQuote" class="mt15">We may be very busy, we may be very ‘efficient’, but we will also be truly ‘effective’ only when we begin with the end in mind<br><small>STEVEN COVEY</small></blockquote>
+
+        </div>
+    </div>
+</div>
+<!--partnership-->
+@Html.Partial("_Partnership")
+<!--partnership-->
+<!--works-->
+@Html.Partial("_Works")
+<!--works-->
+<div id="paralaxSlice4" data-stellar-background-ratio="0.5">
+    <div class="maskParent">
+        <div class="paralaxMask"></div>
+
+        <div class="paralaxText">
+            <blockquote>Keep in touch with us</blockquote>
+
+        </div>
+    </div>
+</div>
+<!--contact-->
+@Html.Partial("_Contact")
+<!--contact-->

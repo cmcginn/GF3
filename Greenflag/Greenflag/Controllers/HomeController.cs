@@ -39,5 +39,6 @@ namespace Greenflag.Controllers
             }
             return Json(new { success = success });
         }
+
     }
 }
