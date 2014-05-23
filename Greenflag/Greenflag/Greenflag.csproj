@@ -234,9 +234,6 @@
     <Content Include="images\logoLarge.png" />
     <Content Include="images\logoMain.png" />
     <Content Include="images\logoSmall-flag.png" />
-    <Content Include="images\main-logo-big.png" />
-    <Content Include="images\main-logo.png" />
-    <Content Include="images\neko-logo.png" />
     <Content Include="images\news\desktopApplications.png" />
     <Content Include="images\news\desktopApplications_small.png" />
     <Content Include="images\news\mobileApplications.png" />
@@ -544,6 +541,7 @@
     <Content Include="Views\Agencies\_Works.cshtml" />
     <Content Include="Views\Agencies\_About.cshtml" />
     <Content Include="Views\Agencies\_Partnership.cshtml" />
+    <None Include="Properties\PublishProfiles\Release.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

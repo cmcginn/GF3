@@ -50,7 +50,7 @@
 }
 #agencyServices article p {
     text-align: justify;
-    height: 150px;
+
 }
 #agencyServices article p a {
     white-space: nowrap;
@@ -58,6 +58,9 @@
 }
 #agencyServices a {
     outline: none;
+}
+#agencyServices i {
+    margin: auto;
 }
 @media(min-width:768px) {
         .newsText p {
