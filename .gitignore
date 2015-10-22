@@ -77,7 +77,7 @@ build/
 *.pidb
 *.log
 *.scc
-
+*.config
 # Visual C++ cache files
 ipch/
 *.aps
@@ -213,5 +213,3 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-
-*.config
