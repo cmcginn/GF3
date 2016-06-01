@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -482,6 +483,8 @@
     <Content Include="js-plugin\respond\respond.min.js" />
     <Content Include="js-plugin\respond\respond.src.js" />
     <Content Include="js-plugin\smoothscroll\SmoothScroll.js" />
+    <Content Include="js-plugin\whirl\whirl.css" />
+    <Content Include="js-plugin\whirl\whirl.min.css" />
     <Content Include="js\._custom.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\modernizr-2.6.1.min.js" />

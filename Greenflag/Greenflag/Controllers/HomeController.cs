@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Greenflag.Services;
@@ -20,7 +21,7 @@ namespace Greenflag.Controllers
         }
 
         [HttpPost]
-        public JsonResult Contact()
+        public async Task<JsonResult> Contact()
         {
             var frm = Request.Form;
             bool success = false;
@@ -31,7 +32,7 @@ namespace Greenflag.Controllers
                 var comments = Request.Form["comments"].Trim();
                 var phone = String.IsNullOrEmpty(Request.Form["phone"]) ? "" : Request.Form["phone"].Trim();
                 var service = new EmailService();
-                success = service.SendContactSubmission(email, name, comments, phone);
+                success = await service.SendContactSubmission(email, name, comments, phone);
             }
             catch
             {

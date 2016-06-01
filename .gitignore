@@ -77,7 +77,7 @@ build/
 *.pidb
 *.log
 *.scc
-*.config
+./Greenflag/Greenflag/*.config
 # Visual C++ cache files
 ipch/
 *.aps

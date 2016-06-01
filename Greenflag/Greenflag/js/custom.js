@@ -977,8 +977,11 @@ jQuery(function () {
                 error.insertBefore(element);
             },
             submitHandler: function (form) {
+                $('#contactSlice').addClass('whirl duo');
                 jQuery(form).ajaxSubmit({
+                    
                     success: function (e) {
+                        $('#contactSlice').removeClass('whirl duo');
                         if (e.success) {
                             $('#contactfrm').hide();
                             $('#contactResult').fadeIn(1000);
