@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -64,7 +67,7 @@
 
     </script>
 </head>
-<body data-spy="scroll" data-target="#scrollTarget" data-offset="150" id="fullScreen">
+<body data-spy="scroll" data-target="#scrollTarget" data-offset="150" class="activateAppearAnimation">
     <!-- Preloader -->
     <div id="preloader">
         <div id="status">
@@ -82,19 +85,8 @@
                 <nav class="navbar navbar-default scrollMenu" role="navigation">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                        <a class="navbar-brand" href="/"><img src="/images/logoMain.png" alt="Ashley website template" /></a>
+                        <a class="navbar-brand" href="/"><img src="/images/logoMain.png" alt="Ashley website template"/></a>
                     </div>
-                    <div class="collapse navbar-collapse navbar-ex1-collapse" id="scrollTarget">
-                        <ul class="nav navbar-nav pull-right">
-                            <li class="active"><a href="#homeFullScreen"><i class="icon-home-outline"></i>Home</a> </li>
-                            <li><a href="#about"><i class="icon-star"></i>About</a> </li>
-                            <li><a href="#services"><i class="icon-thumbs-up"></i>Services</a> </li>
-                            <li><a href="#works"><i class="icon-popup-1"></i>Works</a> </li>
-                            <li><a href="#technologies"><i class="icon-cog-outline"></i>Techologies</a> </li>
-                            <li><a href="#contactSlice"><i class="icon-mail"></i>Contact</a> </li>
-                        </ul>
-                    </div>
-
                 </nav>
             </div>
         </header>
@@ -169,7 +161,8 @@
     <script type="text/javascript" src="/js-plugin/parallax/js/jquery.scrollTo-1.4.3.1-min.js"></script>
     <script type="text/javascript" src="/js-plugin/parallax/js/jquery.localscroll-1.2.7-min.js"></script>
     <script type="text/javascript" src="/js-plugin/parallax/js/jquery.stellar.min.js"></script>
-    <!-- <script type="text/javascript" src="js-plugin/smoothscroll/SmoothScroll.js"></script> -->
+<!-- <script type="text/javascript" src="js-plugin/smoothscroll/SmoothScroll.js"></script> -->
+    <script type="text/javascript" src="/js-plugin/appear/jquery.appear.js"></script>
     <script type="text/javascript" src="/js-plugin/pageSlide/jquery.pageslide-custom.js"></script>
     <script type="text/javascript" src="/js-plugin/jquery.sharrre-1.3.4/jquery.sharrre-1.3.4.min.js"></script>
 

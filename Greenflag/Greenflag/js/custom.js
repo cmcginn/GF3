@@ -937,13 +937,12 @@ if($('.scrollMenu').length){
 /* Appear function */
 function nekoAnimAppear(){
     $("[data-nekoAnim]").each(function() {
-
+       
         var $this = $(this);
 
         $this.addClass("nekoAnim-invisible");
         
         if($(window).width() > 767) {
-            
             $this.appear(function() {
 
                 var delay = ($this.data("nekodelay") ? $this.data("nekodelay") : 1);
